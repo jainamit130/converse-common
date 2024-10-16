@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "com.amit.converse.common";
+option java_outer_classname = "UserProto";
+
+package user;
+
+// Message for user information
+message User {
+  string userId = 1;
+  string username = 2;
+  google.protobuf.Timestamp creationDate = 3;
+}
+
+// Request for User Creation
+message SendMessageRequest {
+  User user = 1;  // Renamed field to clarify it contains user information
+}
+
+// Response for User Creation Request
+message SendMessageResponse {
+  bool success = 1;  // A single boolean field for success or failure
+}
+
+// Chat service definition
+service UserService {
+  rpc SendMessage(SendMessageRequest) returns (SendMessageResponse);
+}

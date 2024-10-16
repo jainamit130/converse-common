@@ -9,13 +9,13 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.40.1)",
-    comments = "Source: chat.proto")
+    comments = "Source: user.proto")
 @io.grpc.stub.annotations.GrpcGenerated
-public final class ChatServiceGrpc {
+public final class UserServiceGrpc {
 
-  private ChatServiceGrpc() {}
+  private UserServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "chat.ChatService";
+  public static final String SERVICE_NAME = "user.UserService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.amit.converse.common.SendMessageRequest,
@@ -29,10 +29,10 @@ public final class ChatServiceGrpc {
   public static io.grpc.MethodDescriptor<com.amit.converse.common.SendMessageRequest,
       com.amit.converse.common.SendMessageResponse> getSendMessageMethod() {
     io.grpc.MethodDescriptor<com.amit.converse.common.SendMessageRequest, com.amit.converse.common.SendMessageResponse> getSendMessageMethod;
-    if ((getSendMessageMethod = ChatServiceGrpc.getSendMessageMethod) == null) {
-      synchronized (ChatServiceGrpc.class) {
-        if ((getSendMessageMethod = ChatServiceGrpc.getSendMessageMethod) == null) {
-          ChatServiceGrpc.getSendMessageMethod = getSendMessageMethod =
+    if ((getSendMessageMethod = UserServiceGrpc.getSendMessageMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getSendMessageMethod = UserServiceGrpc.getSendMessageMethod) == null) {
+          UserServiceGrpc.getSendMessageMethod = getSendMessageMethod =
               io.grpc.MethodDescriptor.<com.amit.converse.common.SendMessageRequest, com.amit.converse.common.SendMessageResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendMessage"))
@@ -41,7 +41,7 @@ public final class ChatServiceGrpc {
                   com.amit.converse.common.SendMessageRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.amit.converse.common.SendMessageResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ChatServiceMethodDescriptorSupplier("SendMessage"))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("SendMessage"))
               .build();
         }
       }
@@ -49,79 +49,48 @@ public final class ChatServiceGrpc {
     return getSendMessageMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.amit.converse.common.GetMessagesRequest,
-      com.amit.converse.common.GetMessagesResponse> getGetMessagesMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetMessages",
-      requestType = com.amit.converse.common.GetMessagesRequest.class,
-      responseType = com.amit.converse.common.GetMessagesResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.amit.converse.common.GetMessagesRequest,
-      com.amit.converse.common.GetMessagesResponse> getGetMessagesMethod() {
-    io.grpc.MethodDescriptor<com.amit.converse.common.GetMessagesRequest, com.amit.converse.common.GetMessagesResponse> getGetMessagesMethod;
-    if ((getGetMessagesMethod = ChatServiceGrpc.getGetMessagesMethod) == null) {
-      synchronized (ChatServiceGrpc.class) {
-        if ((getGetMessagesMethod = ChatServiceGrpc.getGetMessagesMethod) == null) {
-          ChatServiceGrpc.getGetMessagesMethod = getGetMessagesMethod =
-              io.grpc.MethodDescriptor.<com.amit.converse.common.GetMessagesRequest, com.amit.converse.common.GetMessagesResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMessages"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.amit.converse.common.GetMessagesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.amit.converse.common.GetMessagesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ChatServiceMethodDescriptorSupplier("GetMessages"))
-              .build();
-        }
-      }
-    }
-    return getGetMessagesMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static ChatServiceStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<ChatServiceStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<ChatServiceStub>() {
+  public static UserServiceStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<UserServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserServiceStub>() {
         @java.lang.Override
-        public ChatServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new ChatServiceStub(channel, callOptions);
+        public UserServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserServiceStub(channel, callOptions);
         }
       };
-    return ChatServiceStub.newStub(factory, channel);
+    return UserServiceStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static ChatServiceBlockingStub newBlockingStub(
+  public static UserServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<ChatServiceBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<ChatServiceBlockingStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<UserServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserServiceBlockingStub>() {
         @java.lang.Override
-        public ChatServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new ChatServiceBlockingStub(channel, callOptions);
+        public UserServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserServiceBlockingStub(channel, callOptions);
         }
       };
-    return ChatServiceBlockingStub.newStub(factory, channel);
+    return UserServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static ChatServiceFutureStub newFutureStub(
+  public static UserServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<ChatServiceFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<ChatServiceFutureStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<UserServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserServiceFutureStub>() {
         @java.lang.Override
-        public ChatServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new ChatServiceFutureStub(channel, callOptions);
+        public UserServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserServiceFutureStub(channel, callOptions);
         }
       };
-    return ChatServiceFutureStub.newStub(factory, channel);
+    return UserServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -129,20 +98,13 @@ public final class ChatServiceGrpc {
    * Chat service definition
    * </pre>
    */
-  public static abstract class ChatServiceImplBase implements io.grpc.BindableService {
+  public static abstract class UserServiceImplBase implements io.grpc.BindableService {
 
     /**
      */
     public void sendMessage(com.amit.converse.common.SendMessageRequest request,
         io.grpc.stub.StreamObserver<com.amit.converse.common.SendMessageResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendMessageMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void getMessages(com.amit.converse.common.GetMessagesRequest request,
-        io.grpc.stub.StreamObserver<com.amit.converse.common.GetMessagesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMessagesMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -154,13 +116,6 @@ public final class ChatServiceGrpc {
                 com.amit.converse.common.SendMessageRequest,
                 com.amit.converse.common.SendMessageResponse>(
                   this, METHODID_SEND_MESSAGE)))
-          .addMethod(
-            getGetMessagesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.amit.converse.common.GetMessagesRequest,
-                com.amit.converse.common.GetMessagesResponse>(
-                  this, METHODID_GET_MESSAGES)))
           .build();
     }
   }
@@ -170,16 +125,16 @@ public final class ChatServiceGrpc {
    * Chat service definition
    * </pre>
    */
-  public static final class ChatServiceStub extends io.grpc.stub.AbstractAsyncStub<ChatServiceStub> {
-    private ChatServiceStub(
+  public static final class UserServiceStub extends io.grpc.stub.AbstractAsyncStub<UserServiceStub> {
+    private UserServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ChatServiceStub build(
+    protected UserServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new ChatServiceStub(channel, callOptions);
+      return new UserServiceStub(channel, callOptions);
     }
 
     /**
@@ -189,14 +144,6 @@ public final class ChatServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSendMessageMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     */
-    public void getMessages(com.amit.converse.common.GetMessagesRequest request,
-        io.grpc.stub.StreamObserver<com.amit.converse.common.GetMessagesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetMessagesMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -204,16 +151,16 @@ public final class ChatServiceGrpc {
    * Chat service definition
    * </pre>
    */
-  public static final class ChatServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ChatServiceBlockingStub> {
-    private ChatServiceBlockingStub(
+  public static final class UserServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<UserServiceBlockingStub> {
+    private UserServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ChatServiceBlockingStub build(
+    protected UserServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new ChatServiceBlockingStub(channel, callOptions);
+      return new UserServiceBlockingStub(channel, callOptions);
     }
 
     /**
@@ -222,13 +169,6 @@ public final class ChatServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSendMessageMethod(), getCallOptions(), request);
     }
-
-    /**
-     */
-    public com.amit.converse.common.GetMessagesResponse getMessages(com.amit.converse.common.GetMessagesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetMessagesMethod(), getCallOptions(), request);
-    }
   }
 
   /**
@@ -236,16 +176,16 @@ public final class ChatServiceGrpc {
    * Chat service definition
    * </pre>
    */
-  public static final class ChatServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ChatServiceFutureStub> {
-    private ChatServiceFutureStub(
+  public static final class UserServiceFutureStub extends io.grpc.stub.AbstractFutureStub<UserServiceFutureStub> {
+    private UserServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ChatServiceFutureStub build(
+    protected UserServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new ChatServiceFutureStub(channel, callOptions);
+      return new UserServiceFutureStub(channel, callOptions);
     }
 
     /**
@@ -255,28 +195,19 @@ public final class ChatServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSendMessageMethod(), getCallOptions()), request);
     }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.amit.converse.common.GetMessagesResponse> getMessages(
-        com.amit.converse.common.GetMessagesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetMessagesMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_SEND_MESSAGE = 0;
-  private static final int METHODID_GET_MESSAGES = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ChatServiceImplBase serviceImpl;
+    private final UserServiceImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ChatServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(UserServiceImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -288,10 +219,6 @@ public final class ChatServiceGrpc {
         case METHODID_SEND_MESSAGE:
           serviceImpl.sendMessage((com.amit.converse.common.SendMessageRequest) request,
               (io.grpc.stub.StreamObserver<com.amit.converse.common.SendMessageResponse>) responseObserver);
-          break;
-        case METHODID_GET_MESSAGES:
-          serviceImpl.getMessages((com.amit.converse.common.GetMessagesRequest) request,
-              (io.grpc.stub.StreamObserver<com.amit.converse.common.GetMessagesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -309,32 +236,32 @@ public final class ChatServiceGrpc {
     }
   }
 
-  private static abstract class ChatServiceBaseDescriptorSupplier
+  private static abstract class UserServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    ChatServiceBaseDescriptorSupplier() {}
+    UserServiceBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.amit.converse.common.ChatProto.getDescriptor();
+      return com.amit.converse.common.UserProto.getDescriptor();
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("ChatService");
+      return getFileDescriptor().findServiceByName("UserService");
     }
   }
 
-  private static final class ChatServiceFileDescriptorSupplier
-      extends ChatServiceBaseDescriptorSupplier {
-    ChatServiceFileDescriptorSupplier() {}
+  private static final class UserServiceFileDescriptorSupplier
+      extends UserServiceBaseDescriptorSupplier {
+    UserServiceFileDescriptorSupplier() {}
   }
 
-  private static final class ChatServiceMethodDescriptorSupplier
-      extends ChatServiceBaseDescriptorSupplier
+  private static final class UserServiceMethodDescriptorSupplier
+      extends UserServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final String methodName;
 
-    ChatServiceMethodDescriptorSupplier(String methodName) {
+    UserServiceMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 
@@ -349,13 +276,12 @@ public final class ChatServiceGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (ChatServiceGrpc.class) {
+      synchronized (UserServiceGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new ChatServiceFileDescriptorSupplier())
+              .setSchemaDescriptor(new UserServiceFileDescriptorSupplier())
               .addMethod(getSendMessageMethod())
-              .addMethod(getGetMessagesMethod())
               .build();
         }
       }
